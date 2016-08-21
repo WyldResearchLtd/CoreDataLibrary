@@ -30,13 +30,14 @@ CoreDataLibrary is available under the MIT license. See the LICENSE file for mor
 
 
 
-## Creating this Example
+# Creating this Example
 1. From Terminal, run ```pod lib create CoreDataLibrary``` 
 
-Configuring CoreDataLibrary template.  
-
-------------------------------  
-
+This is the output and input required from running the above command
+```
+Configuring CoreDataLibrary template.
+-------------------------------------
+  
 To get you started we need to ask a few questions, this should only take a minute.  
   
 If this is your first time we recommend running through with the guide:   
@@ -58,7 +59,7 @@ Would you like to do view based testing? [ Yes / No ]
   
 What is your class prefix?  
 > WR  
-  
+```
   
 2. open the podfile and comment out ```inherit!``` line
 3. Pun ```pod install``` from the Examples directory
