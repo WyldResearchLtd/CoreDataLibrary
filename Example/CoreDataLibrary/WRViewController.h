@@ -7,7 +7,11 @@
 //
 
 @import UIKit;
+#define MR_SHORTHAND
+#import "CoreData+MagicalRecord.h"
+#import "HostEntity.h"
+#import "WRService.h"
 
 @interface WRViewController : UIViewController
-
+-(NSManagedObjectContext*) setupCoreData;
 @end

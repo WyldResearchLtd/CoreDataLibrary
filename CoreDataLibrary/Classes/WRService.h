@@ -10,5 +10,9 @@
 #define MR_SHORTHAND
 #import "CoreData+MagicalRecord.h"
 
+
 @interface WRService : NSObject
+-(NSManagedObjectContext*) setupCoreData;
+-(void)persistNewEntity:(NSString *)value withContext:(NSManagedObjectContext*) context;
+-(NSArray*) fetchEntities;
 @end

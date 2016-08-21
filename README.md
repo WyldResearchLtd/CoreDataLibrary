@@ -126,14 +126,36 @@ WRService.h
 @end
 ```
   
-4. In the Project Explorer, select the Pods project, then under Build Phases->Link Binaries with Libraries,  
-   Click on the + to add the MagicalRecord.framework  
+4.  In the Project Explorer, select the Pods project, then under Build Phases->Link Binaries with Libraries,  
+    Click on the + to add the MagicalRecord.framework  
 
-5. Select the CoreDataLibrary scheme and Run.  
-6. Select the CoreDataLibrary-Example schema, then Run  
-7. Install mogenerator with the command ```$ sudo brew install mogenerator``` 
-8. Right click on the Classes directory, select New File. Select iOS->CoreData->Data Model  
-9. 
+5.  Select the CoreDataLibrary scheme and Run.  
+6.  Select the CoreDataLibrary-Example schema, then Run  
+7.  Install mogenerator with the command ```$ sudo brew install mogenerator``` 
+8.  Right click on the Classes directory, select New File. Select iOS->CoreData->Data Model  
+    Click 'Next', and make sure the CoreDataLibrary target is checked.  
+    The Model.xcdatamodeld is placed in the Classes directory 
+9.  Add a new Entity to the model (An entity is a Table)- 'TestTable'  
+10. Add a new attribute to the Entity- 'testattribute' of type String  
+11. With the model and TestEntity selected, in the data model inspector in the right pane, add 'TestEntity' as the Class  
+12. Setup a target for mogenerator by running the following comand:  
+    ```mogenerator --v2 -m "CoreDataLibrary/Classes/Model.xcdatamodeld" -O "CoreDataLibrary/Classes"```  
+    If successful you will see this output:
+    ```2 machine files and 2 human files generated.``` 
+13. In your Pods project, open your project properties and tap the “+” button at the bottom of the Targets list.
+14. Add an “Aggregate” target (you’ll find it in the iOS/Other grouping). Tap Next.
+15. Name the target whatever you’d like. I’ll call mine Mogenerator. Hit Done.
+16. Now select the new target you just created, select the “Build Phases” tab, tap “+” to add a build phase then select “New Run Script Build Phase”.
+17. Open the Run Script group that just appeared, keep the Shell at /bin/sh, and then enter the following script if you’re using Objective-C. Because the Pods projects source directory is in the Pods directory, we have to modify the script to reference the correct directory (```mogenerator --v2 -m "../../CoreDataLibrary/Classes/Model.xcdatamodeld" -O "../../CoreDataLibrary/Classes"```)
+18. Delete the files created in Step 12. Select the mogenerator target and build. This can be used regenerate all the files, if you change the model.
+19. Select Pods/Development Pods/Classes dir again and right click and 'Add files to Pods', and add the 4 files.
+  
+  
+$mogenerator --v2 -m "Example/CoreDataLibrary/Model/Host.xcdatamodeld" -O "Example/CoreDataLibrary/Model  
+
+
+
+
 
 
 
