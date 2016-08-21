@@ -1,0 +1,17 @@
+PODS:
+  - CoreDataLibrary (0.1.0)
+  - MagicalRecord/Shorthand (2.2)
+
+DEPENDENCIES:
+  - CoreDataLibrary (from `../`)
+  - MagicalRecord/Shorthand (~> 2.2)
+
+EXTERNAL SOURCES:
+  CoreDataLibrary:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CoreDataLibrary: 178574debd42e2e9357911c5d973eacf4709e438
+  MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
+
+COCOAPODS: 0.39.0

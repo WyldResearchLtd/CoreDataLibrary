@@ -1,0 +1,22 @@
+{
+  "name": "CoreDataLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of CoreDataLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CoreDataLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Gene Myers": "gene@wyldresearch.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CoreDataLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CoreDataLibrary/Classes/**/*"
+}
