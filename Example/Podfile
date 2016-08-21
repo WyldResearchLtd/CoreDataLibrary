@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CoreDataLibrary_Example' do
+  pod 'CoreDataLibrary', :path => '../'
+
+  target 'CoreDataLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
